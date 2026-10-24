@@ -1,17 +1,24 @@
 /* ==========================================================================
-   NUMERIX — CATALOGUE PRODUITS
+   NUMERIX — CATALOGUE PRODUITS (RESTRUCTURÉ)
    --------------------------------------------------------------------------
+   Structure de vente :
+   1) Caméra de Surveillance
+   2) Détecteur de Métal
+   3) Détecteur de faux billets
+   4) Imprimante de Badge PVC (avec cartes PVC-RFID-MIFARE)
+   5) Rubans de Badge PVC (avec Accessoires et Kit de nettoyage)
+   
    POUR AJOUTER LES PRIX : écrivez le montant dans le champ  prix: ""
        exemple :   prix: "150 000"     → s'affiche « 150 000 FCFA »
    Pour une promotion : renseignez aussi  ancienPrix: "180 000"  et  badge: "Promo"
-
+   
    POUR AJOUTER LES PHOTOS : déposez les images dans  images/products/
    en les nommant avec l'identifiant (id) du produit. Exemple :
        camera-interieure.jpg           → photo principale
        camera-interieure-2.jpg         → 2e photo (galerie de la fiche produit)
        camera-interieure-3.jpg ...     → jusqu'à -6
    Formats acceptés : .jpg  .jpeg  .png  .webp   (rien d'autre à modifier !)
-
+   
    POUR AJOUTER UN NOUVEAU PRODUIT : copiez un bloc { ... }, changez l'id,
    la catégorie (cat), le nom et la description. C'est tout.
    ========================================================================== */
@@ -19,30 +26,28 @@
 /* ----- Groupes (correspondent aux pages du site) ----- */
 window.GROUPES = [
   { id: "securite", nom: "Sécurité électronique",     page: "securite.html", icone: "shield",
-    texte: "Caméras de surveillance, détection de métaux et contrôle des billets : sécurisez vos espaces." },
-  { id: "badges",   nom: "Impression de badges",      page: "badges.html",   icone: "printer",
-    texte: "Imprimantes de badges PVC, rubans et service de personnalisation professionnelle." },
-  { id: "cartes",   nom: "Cartes et identification",  page: "cartes.html",   icone: "card",
-    texte: "Cartes PVC, MIFARE et RFID pour l'identification et le contrôle d'accès." }
+    texte: "Caméras de surveillance, détecteurs de métaux et contrôle des billets : sécurisez vos espaces." },
+  { id: "badges",   nom: "Imprémentation de badges",   page: "badges.html",   icone: "printer",
+    texte: "Imprimantes de badges PVC, rubans, accessoires et kits de nettoyage professionnels." },
+  { id: "impression", nom: "Impression de badges",    page: "impression.html", icone: "badge",
+    texte: "Service d'impression de badges personnalisés pour vos organisations." }
 ];
 
 /* ----- Catégories ----- */
 window.CATEGORIES = [
-  { id: "cameras",      groupe: "securite", nom: "Caméras de surveillance",         icone: "camera",  court: "Caméras" },
-  { id: "metaux",       groupe: "securite", nom: "Détecteurs de métaux",            icone: "scan",    court: "Détecteurs de métaux" },
-  { id: "faux-billets", groupe: "securite", nom: "Détecteurs de faux billets",      icone: "banknote",court: "Faux billets" },
-  { id: "imprimantes",  groupe: "badges",   nom: "Imprimantes de badges PVC",       icone: "printer", court: "Imprimantes" },
-  { id: "rubans",       groupe: "badges",   nom: "Rubans pour imprimantes de badges", icone: "ribbon", court: "Rubans" },
-  { id: "impression",   groupe: "badges",   nom: "Impression de badges professionnels", icone: "badge", court: "Impression" },
-  { id: "cartes-pvc",   groupe: "cartes",   nom: "Cartes PVC blanches",             icone: "card",    court: "Cartes PVC" },
-  { id: "mifare",       groupe: "cartes",   nom: "Cartes MIFARE",                   icone: "wifi",    court: "MIFARE" },
-  { id: "rfid",         groupe: "cartes",   nom: "Cartes RFID",                     icone: "radio",   court: "RFID" }
+  { id: "cameras",      groupe: "securite", nom: "Caméras de surveillance",      icone: "camera",   court: "Caméras" },
+  { id: "metaux",       groupe: "securite", nom: "Détecteurs de métaux",         icone: "scan",     court: "Métaux" },
+  { id: "faux-billets", groupe: "securite", nom: "Détecteurs de faux billets",  icone: "banknote", court: "Faux billets" },
+  { id: "imprimantes",  groupe: "badges",   nom: "Imprimantes de badges PVC",   icone: "printer",  court: "Imprimantes" },
+  { id: "rubans",       groupe: "badges",   nom: "Rubans de Badge PVC",         icone: "ribbon",   court: "Rubans" },
+  { id: "accessoires",  groupe: "badges",   nom: "Accessoires et Kits",         icone: "tools",    court: "Accessoires" },
+  { id: "cartes",       groupe: "badges",   nom: "Cartes PVC-RFID-MIFARE",      icone: "card",     court: "Cartes" }
 ];
 
 /* ----- Produits ----- */
 window.PRODUITS = [
 
-  /* ============ CAMÉRAS DE SURVEILLANCE ============ */
+  /* ============ 1) CAMÉRAS DE SURVEILLANCE ============ */
   {
     id: "camera-interieure", cat: "cameras", vedette: true,
     nom: "Caméra de surveillance intérieure",
@@ -73,7 +78,7 @@ window.PRODUITS = [
     // NOTE INTERNE : confirmer avec le client les marques, les modèles et la possibilité d'installation.
   },
 
-  /* ============ DÉTECTEURS DE MÉTAUX ============ */
+  /* ============ 2) DÉTECTEURS DE MÉTAUX ============ */
   {
     id: "portique-metaux", cat: "metaux", vedette: true,
     nom: "Portique de détection de métaux",
@@ -94,7 +99,7 @@ window.PRODUITS = [
     // NOTE INTERNE : préciser sensibilité, autonomie, type de batterie et accessoires inclus.
   },
 
-  /* ============ DÉTECTEURS DE FAUX BILLETS ============ */
+  /* ============ 3) DÉTECTEURS DE FAUX BILLETS ============ */
   {
     id: "detecteur-faux-billets", cat: "faux-billets", vedette: true,
     nom: "Détecteur automatique de faux billets",
@@ -115,7 +120,7 @@ window.PRODUITS = [
     prix: "", ancienPrix: "", badge: ""
   },
 
-  /* ============ IMPRIMANTES DE BADGES PVC ============ */
+  /* ============ 4) IMPRIMANTES DE BADGES PVC + CARTES PVC-RFID-MIFARE ============ */
   {
     id: "imprimante-couleur", cat: "imprimantes", vedette: true,
     nom: "Imprimante de badges PVC couleur",
@@ -134,12 +139,52 @@ window.PRODUITS = [
     utilisations: ["Cartes de membre", "Badges d'accès", "Cartes numérotées", "Identification simple"],
     prix: "", ancienPrix: "", badge: ""
   },
-  /* ============ RUBANS ============ */
+  /* --- Cartes PVC-RFID-MIFARE (associées aux imprimantes) --- */
+  {
+    id: "cartes-pvc-blanches", cat: "cartes", vedette: true,
+    nom: "Cartes PVC blanches vierges",
+    court: "La base de tous vos badges et cartes personnalisées.",
+    description: "Des cartes vierges compatibles avec nos imprimantes de badges pour créer vos badges et cartes personnalisées.",
+    caracteristiques: ["Format CR80 (selon disponibilité)", "Épaisseur et finition selon la référence", "Conditionnement par paquet", "Compatible avec les imprimantes de cartes"],
+    utilisations: ["Badges professionnels", "Cartes de membre", "Cartes d'étudiant", "Cartes de visite format carte PVC", "Cartes d'identification"],
+    prix: "", ancienPrix: "", badge: ""
+  },
+  {
+    id: "cartes-pvc-personnalisees", cat: "cartes",
+    nom: "Cartes PVC personnalisées",
+    court: "Des cartes à vos couleurs, prêtes à l'emploi.",
+    description: "Des cartes professionnelles personnalisées avec les informations nécessaires à l'identification d'une personne ou d'un membre d'une organisation.",
+    caracteristiques: ["Nom et photo", "Logo de l'organisation", "Numéro d'identification", "Code selon la demande"],
+    utilisations: ["Personnel", "Étudiants", "Membres", "Clients fidèles"],
+    prix: "", ancienPrix: "", badge: ""
+  },
+  {
+    id: "carte-mifare", cat: "cartes", vedette: true,
+    nom: "Carte MIFARE sans contact",
+    court: "Accès, identification et gestion des entrées sans contact.",
+    description: "Une carte électronique sans contact compatible avec nos imprimantes de badges pour les systèmes d'identification et de contrôle d'accès.",
+    caracteristiques: ["Technologie sans contact", "Référence de puce selon le modèle", "Capacité mémoire selon la référence", "Compatibilité avec votre système à vérifier"],
+    utilisations: ["Accès aux bâtiments", "Identification des membres", "Gestion des accès en entreprise", "Systèmes de badges compatibles", "Services compatibles"],
+    prix: "", ancienPrix: "", badge: ""
+    // NOTE INTERNE : préciser référence de la puce, fréquence, capacité et compatibilité.
+  },
+  {
+    id: "carte-rfid", cat: "cartes", vedette: true,
+    nom: "Carte RFID",
+    court: "Identification par radiofréquence pour vos applications.",
+    description: "Une carte compatible avec nos imprimantes de badges, équipée d'une technologie d'identification par radiofréquence.",
+    caracteristiques: ["Fréquence selon la référence", "Type de puce selon le modèle", "Format de la carte", "Mémoire selon la technologie"],
+    utilisations: ["Contrôle d'accès", "Identification", "Gestion des entrées", "Systèmes de présence compatibles", "Applications professionnelles"],
+    prix: "", ancienPrix: "", badge: ""
+    // NOTE INTERNE : MIFARE est une famille de cartes sans contact, RFID est un terme plus large : ne pas présenter toutes les cartes comme identiques.
+  },
+
+  /* ============ 5) RUBANS DE BADGE PVC + ACCESSOIRES + KITS ============ */
   {
     id: "ruban-ymcko", cat: "rubans", vedette: true,
     nom: "Ruban couleur YMCKO",
     court: "Le consommable pour des badges en couleur éclatante.",
-    description: "Un consommable utilisé par certaines imprimantes de cartes PVC pour produire des badges en couleur. Le ruban YMCKO comprend généralement des panneaux jaune, magenta, cyan, noir et un panneau de protection.",
+    description: "Un consommable utilisé par certaines imprimantes de cartes PVC pour produire des badges en couleur. Le ruban YMCKO comprend généralement des panneaux jaune, magenta, cyan, noir et un panéau de protection.",
     caracteristiques: ["Panneaux jaune, magenta, cyan, noir + protection", "Compatibilité selon marque et modèle d'imprimante", "Nombre d'impressions selon la référence"],
     utilisations: ["Badges couleur", "Cartes d'étudiant", "Cartes de membre", "Cartes professionnelles"],
     prix: "", ancienPrix: "", badge: ""
@@ -154,10 +199,31 @@ window.PRODUITS = [
     utilisations: ["Personnalisation des cartes", "Besoins spécifiques d'impression"],
     prix: "", ancienPrix: "", badge: ""
   },
-
-  /* ============ IMPRESSION DE BADGES (SERVICE) ============ */
   {
-    id: "impression-badges", cat: "impression", vedette: true,
+    id: "ruban-monochrome", cat: "rubans", vedette: true,
+    nom: "Ruban monochrome noir",
+    court: "Pour l'impression de textes, numéros et codes.",
+    description: "Un consommable destiné à l'impression monochrome de textes, de numéros et d'autres informations sur les cartes compatibles. Compatible avec les imprimantes de badges PVC.",
+    caracteristiques: ["Impression monochrome noire", "Compatibilité selon l'imprimante", "Capacité d'impression selon la référence"],
+    utilisations: ["Textes", "Numéros", "Codes d'identification"],
+    prix: "", ancienPrix: "", badge: ""
+  },
+
+  /* --- Accessoires et Kits de nettoyage --- */
+  {
+    id: "accessoires-imprimante", cat: "accessoires",
+    nom: "Kits de nettoyage et accessoires",
+    court: "Entretien et pièces compatibles avec nos imprimantes.",
+    description: "Des accessoires destinés à faciliter l'utilisation et l'entretien des imprimantes de cartes professionnelles. Kits de nettoyage pour préserver la qualité d'impression.",
+    caracteristiques: ["Kits de nettoyage", "Rouleaux de nettoyage", "Pièces de remplacement", "Accessoires compatibles avec les imprimantes vendues"],
+    utilisations: ["Entretien régulier", "Remplacement de pièces", "Longévité de l'imprimante"],
+    prix: "", ancienPrix: "", badge: ""
+    // NOTE INTERNE : ne garder que les accessoires réellement disponibles en stock.
+  },
+
+  /* ============ SERVICE D'IMPRESSION DE BADGES ============ */
+  {
+    id: "impression-badges", cat: "accessoires", vedette: true,
     nom: "Impression de badges personnalisés",
     court: "Nous personnalisons vos badges pour votre organisation.",
     description: "Numerix Technologies Services vous accompagne dans la personnalisation de badges destinés aux organisations, aux établissements et aux événements.",
@@ -165,49 +231,5 @@ window.PRODUITS = [
     utilisations: ["Badges du personnel", "Cartes d'étudiant", "Badges de visiteurs", "Badges d'événements", "Cartes de membre"],
     prix: "", ancienPrix: "", badge: ""
     // NOTE INTERNE : confirmer les options d'impression, délais et quantités minimales avec le client.
-  },
-
-  /* ============ CARTES PVC ============ */
-  {
-    id: "cartes-pvc-blanches", cat: "cartes-pvc", vedette: true,
-    nom: "Cartes PVC blanches vierges",
-    court: "La base de tous vos badges et cartes personnalisées.",
-    description: "Des cartes vierges destinées à la création de badges et de cartes personnalisées par impression.",
-    caracteristiques: ["Format CR80 (selon disponibilité)", "Épaisseur et finition selon la référence", "Conditionnement par paquet", "Compatible avec les imprimantes de cartes"],
-    utilisations: ["Badges professionnels", "Cartes de membre", "Cartes d'étudiant", "Cartes de visite format carte PVC", "Cartes d'identification"],
-    prix: "", ancienPrix: "", badge: ""
-  },
-  {
-    id: "cartes-pvc-personnalisees", cat: "cartes-pvc",
-    nom: "Cartes PVC personnalisées",
-    court: "Des cartes à vos couleurs, prêtes à l'emploi.",
-    description: "Des cartes professionnelles personnalisées avec les informations nécessaires à l'identification d'une personne ou d'un membre d'une organisation. Elles peuvent intégrer, selon la demande, un nom, une photo, un logo, un numéro d'identification ou un code.",
-    caracteristiques: ["Nom et photo", "Logo de l'organisation", "Numéro d'identification", "Code selon la demande"],
-    utilisations: ["Personnel", "Étudiants", "Membres", "Clients fidèles"],
-    prix: "", ancienPrix: "", badge: ""
-  },
-
-  /* ============ CARTES MIFARE ============ */
-  {
-    id: "carte-mifare", cat: "mifare", vedette: true,
-    nom: "Carte MIFARE sans contact",
-    court: "Accès, identification et gestion des entrées sans contact.",
-    description: "Une carte électronique sans contact destinée aux systèmes compatibles d'identification et de contrôle d'accès. Toutes les cartes MIFARE ne possèdent pas les mêmes fonctions ni les mêmes niveaux de sécurité.",
-    caracteristiques: ["Technologie sans contact", "Référence de puce selon le modèle", "Capacité mémoire selon la référence", "Compatibilité avec votre système à vérifier"],
-    utilisations: ["Accès aux bâtiments", "Identification des membres", "Gestion des accès en entreprise", "Systèmes de badges compatibles", "Services compatibles"],
-    prix: "", ancienPrix: "", badge: ""
-    // NOTE INTERNE : préciser référence de la puce, fréquence, capacité et compatibilité.
-  },
-
-  /* ============ CARTES RFID ============ */
-  {
-    id: "carte-rfid", cat: "rfid", vedette: true,
-    nom: "Carte RFID",
-    court: "Identification par radiofréquence pour vos applications.",
-    description: "Une carte équipée d'une technologie d'identification par radiofréquence, destinée aux applications compatibles. La technologie, la fréquence et la compatibilité varient selon la référence.",
-    caracteristiques: ["Fréquence selon la référence", "Type de puce selon le modèle", "Format de la carte", "Mémoire selon la technologie"],
-    utilisations: ["Contrôle d'accès", "Identification", "Gestion des entrées", "Systèmes de présence compatibles", "Applications professionnelles"],
-    prix: "", ancienPrix: "", badge: ""
-    // NOTE INTERNE : MIFARE est une famille de cartes sans contact, RFID est un terme plus large : ne pas présenter toutes les cartes comme identiques.
   }
 ];
