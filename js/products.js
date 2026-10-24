@@ -134,17 +134,6 @@ window.PRODUITS = [
     utilisations: ["Cartes de membre", "Badges d'accès", "Cartes numérotées", "Identification simple"],
     prix: "", ancienPrix: "", badge: ""
   },
-  {
-    id: "accessoires-imprimante", cat: "imprimantes",
-    nom: "Accessoires pour imprimantes de badges",
-    court: "Entretien et pièces compatibles avec nos imprimantes.",
-    description: "Des accessoires destinés à faciliter l'utilisation et l'entretien des imprimantes de cartes professionnelles.",
-    caracteristiques: ["Kits de nettoyage", "Rouleaux de nettoyage", "Pièces de remplacement", "Accessoires compatibles avec les imprimantes vendues"],
-    utilisations: ["Entretien régulier", "Remplacement de pièces", "Longévité de l'imprimante"],
-    prix: "", ancienPrix: "", badge: ""
-    // NOTE INTERNE : ne garder que les accessoires réellement disponibles en stock.
-  },
-
   /* ============ RUBANS ============ */
   {
     id: "ruban-ymcko", cat: "rubans", vedette: true,
@@ -155,15 +144,6 @@ window.PRODUITS = [
     utilisations: ["Badges couleur", "Cartes d'étudiant", "Cartes de membre", "Cartes professionnelles"],
     prix: "", ancienPrix: "", badge: ""
     // NOTE INTERNE : préciser marque compatible, modèle d'imprimante, nombre d'impressions, référence exacte.
-  },
-  {
-    id: "ruban-monochrome", cat: "rubans",
-    nom: "Ruban monochrome noir",
-    court: "Pour l'impression de textes, numéros et codes.",
-    description: "Un consommable destiné à l'impression monochrome de textes, de numéros et d'autres informations sur les cartes compatibles.",
-    caracteristiques: ["Impression monochrome noire", "Compatibilité selon l'imprimante", "Capacité d'impression selon la référence"],
-    utilisations: ["Textes", "Numéros", "Codes d'identification"],
-    prix: "", ancienPrix: "", badge: ""
   },
   {
     id: "autres-rubans", cat: "rubans",
