@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Demander un devis | Numerix Technologies Services</title>
+<meta name="description" content="Demandez votre devis pour vos équipements de sécurité, imprimantes de badges et cartes. Réponse via WhatsApp ou téléphone.">
+<meta name="theme-color" content="#071433">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Demander un devis | Numerix Technologies Services">
+<meta property="og:description" content="Demandez votre devis pour vos équipements de sécurité, imprimantes de badges et cartes. Réponse via WhatsApp ou téléphone.">
+<meta property="og:image" content="images/og.jpg">
+<meta property="og:locale" content="fr_CI">
+<link rel="icon" type="image/png" href="images/favicon-64.png">
+<link rel="apple-touch-icon" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="devis">
+<div id="site-header"></div>
+<noscript><div class="noscript">Veuillez activer JavaScript pour afficher le catalogue de produits.</div></noscript>
+<main id="main">
+<section class="page-hero"><div class="container">
+  <nav class="crumbs" aria-label="Fil d'Ariane"><a href="index.html">Accueil</a> <i data-icon="chevr"></i> <span>Demander un devis</span></nav>
+  <h1 data-reveal>Demander un devis</h1>
+  <p data-reveal style="--d:.1s">Sélectionnez vos produits, renseignez vos coordonnées, et envoyez votre demande directement sur WhatsApp.</p>
+</div></section>
+<section class="section"><div class="container two">
+  <div class="card" data-reveal="left">
+    <h2>Vos informations</h2>
+    <p style="color:var(--muted)">Votre demande sera préparée et envoyée sur WhatsApp : il vous suffit de valider l'envoi.</p>
+    <form id="quoteForm">
+      <div class="row2">
+        <div class="field"><label for="nom">Nom et prénom *</label><input id="nom" name="nom" required autocomplete="name" placeholder="Ex. Kouassi Yao"></div>
+        <div class="field"><label for="tel">Téléphone *</label><input id="tel" name="telephone" type="tel" required autocomplete="tel" placeholder="+225 ..."></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="ent">Entreprise / Structure</label><input id="ent" name="entreprise" autocomplete="organization" placeholder="Facultatif"></div>
+        <div class="field"><label for="mail">E-mail</label><input id="mail" name="email" type="email" autocomplete="email" placeholder="Facultatif"></div>
+      </div>
+      <div class="field"><label for="ville">Ville / Commune</label><input id="ville" name="ville" placeholder="Ex. Abidjan, Cocody"></div>
+      <div class="field"><label for="msg">Votre besoin</label><textarea id="msg" name="message" placeholder="Précisez la quantité, l'usage, le délai souhaité…"></textarea></div>
+      <button class="btn btn-wa btn-block" type="submit"><i data-icon="whatsapp"></i> Envoyer ma demande sur WhatsApp</button>
+      <p style="text-align:center;margin:16px 0 0;font-size:.9rem;color:var(--muted)">Vous préférez appeler ? <a data-link="tel" style="color:var(--blue-600);font-weight:700"><span data-n="telephone"></span></a></p>
+    </form>
+  </div>
+  <aside class="card" data-reveal="right" style="position:sticky;top:calc(var(--header-h) + 20px)">
+    <h2>Ma sélection</h2>
+    <div id="quoteList"></div>
+    <a class="btn btn-outline btn-sm btn-block" href="produits.html" style="margin-top:10px"><i data-icon="plus"></i> Ajouter d'autres produits</a>
+  </aside>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/config.js"></script>
+<script src="js/products.js"></script>
+<script src="js/site.js"></script>
+</body>
+</html>

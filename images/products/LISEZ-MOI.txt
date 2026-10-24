@@ -1,0 +1,40 @@
+NOMS DES PHOTOS À DÉPOSER DANS CE DOSSIER
+==========================================
+Formats : .jpg .jpeg .png .webp  |  Galerie : ajoutez -2, -3, -4... (ex. camera-interieure-2.jpg)
+
+
+[Caméras de surveillance]
+  camera-interieure.jpg   →   Caméra de surveillance intérieure
+  camera-exterieure.jpg   →   Caméra de surveillance extérieure
+  systeme-videosurveillance.jpg   →   Système de vidéosurveillance
+
+[Détecteurs de métaux]
+  portique-metaux.jpg   →   Portique de détection de métaux
+  detecteur-portatif.jpg   →   Détecteur de métaux portatif
+
+[Détecteurs de faux billets]
+  detecteur-faux-billets.jpg   →   Détecteur automatique de faux billets
+  detecteur-uv.jpg   →   Détecteur de billets UV
+
+[Imprimantes de badges PVC]
+  imprimante-couleur.jpg   →   Imprimante de badges PVC couleur
+  imprimante-monochrome.jpg   →   Imprimante de badges PVC monochrome
+  accessoires-imprimante.jpg   →   Accessoires pour imprimantes de badges
+
+[Rubans pour imprimantes de badges]
+  ruban-ymcko.jpg   →   Ruban couleur YMCKO
+  ruban-monochrome.jpg   →   Ruban monochrome noir
+  autres-rubans.jpg   →   Autres rubans pour badges
+
+[Impression de badges professionnels]
+  impression-badges.jpg   →   Impression de badges personnalisés
+
+[Cartes PVC blanches]
+  cartes-pvc-blanches.jpg   →   Cartes PVC blanches vierges
+  cartes-pvc-personnalisees.jpg   →   Cartes PVC personnalisées
+
+[Cartes MIFARE]
+  carte-mifare.jpg   →   Carte MIFARE sans contact
+
+[Cartes RFID]
+  carte-rfid.jpg   →   Carte RFID
